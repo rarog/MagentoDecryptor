@@ -1,5 +1,5 @@
 <_>
-   <form_key>bW0NnPxQnZWxLpr6</form_key>
+   <form_key>BrzrINHWsmbVBCBw</form_key>
    <name>AndrejSinicyn_Decryptor</name>
    <channel>community</channel>
    <version_ids>
@@ -9,18 +9,19 @@
    <summary>Allows decryption of encrypted order data via SOAP api.</summary>
    <description>This little module allows decryption of encoded order data fields like &quot;cc_number_enc&quot;.
 
-It should be ensured that the SOAP communication happens via encoded connection (SSL), else everyone could read the sensitive data by intercepting the connection.
+Decrypted data is returned only via secure connection (SSL), else only the still encrypted data is returned.
 
 Example call with PHP and Soap-Api v1:
 
 $client = new SoapClient(&apos;https://myserver.tld/api/soap/?wsdl&apos;);
 $session = $client-&gt;login(&apos;MyUser&apos;, &apos;MyPassword&apos;);
 $decodedData = $client-&gt;call($session, &apos;decryptor.decrypt&apos;, &apos;s0m3EnCrYpt3dD474&apos;);</description>
-   <license>Academic Free License (AFL 3.0)</license>
-   <license_uri>http://opensource.org/licenses/afl-3.0.php</license_uri>
-   <version>1.0.0</version>
+   <license>OSL v3.0</license>
+   <license_uri>http://opensource.org/licenses/osl-3.0.php</license_uri>
+   <version>1.0.1</version>
    <stability>stable</stability>
-   <notes>v1.0.0 Initial version</notes>
+   <notes>v1.0.1 Ensure that decrypted content is sent only via secured connection.
+v1.0.0 Initial version</notes>
    <authors>
       <name>
          <name>Andrej Sinicyn</name>
@@ -29,7 +30,7 @@ $decodedData = $client-&gt;call($session, &apos;decryptor.decrypt&apos;, &apos;s
          <user>rarog</user>
       </user>
       <email>
-         <email>rarog@gmx.net</email>
+         <email>rarogit@gmail.com</email>
       </email>
    </authors>
    <depends_php_min>5.3.0</depends_php_min>
@@ -49,7 +50,7 @@ $decodedData = $client-&gt;call($session, &apos;decryptor.decrypt&apos;, &apos;s
             <max/>
          </max>
          <files>
-            <files>      </files>
+            <files>         </files>
          </files>
       </package>
       <extension>

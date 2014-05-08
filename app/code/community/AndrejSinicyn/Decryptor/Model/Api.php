@@ -19,7 +19,7 @@ class AndrejSinicyn_Decryptor_Model_Api extends Mage_Api_Model_Resource_Abstract
 {
     public function decrypt($data)
     {
-        if ($data) {
+        if (($data) && (Mage::app()->getStore()->isCurrentlySecure())) {
             return Mage::helper('core')->decrypt($data);
         }
         return $data;
