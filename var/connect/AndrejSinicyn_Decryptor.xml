@@ -1,0 +1,94 @@
+<_>
+   <form_key>bW0NnPxQnZWxLpr6</form_key>
+   <name>AndrejSinicyn_Decryptor</name>
+   <channel>community</channel>
+   <version_ids>
+      <version_ids>2</version_ids>
+      <version_ids>1</version_ids>
+   </version_ids>
+   <summary>Allows decryption of encrypted order data via SOAP api.</summary>
+   <description>This little module allows decryption of encoded order data fields like &quot;cc_number_enc&quot;.
+
+It should be ensured that the SOAP communication happens via encoded connection (SSL), else everyone could read the sensitive data by intercepting the connection.
+
+Example call with PHP and Soap-Api v1:
+
+$client = new SoapClient(&apos;https://myserver.tld/api/soap/?wsdl&apos;);
+$session = $client-&gt;login(&apos;MyUser&apos;, &apos;MyPassword&apos;);
+$decodedData = $client-&gt;call($session, &apos;decryptor.decrypt&apos;, &apos;s0m3EnCrYpt3dD474&apos;);</description>
+   <license>Academic Free License (AFL 3.0)</license>
+   <license_uri>http://opensource.org/licenses/afl-3.0.php</license_uri>
+   <version>1.0.0</version>
+   <stability>stable</stability>
+   <notes>v1.0.0 Initial version</notes>
+   <authors>
+      <name>
+         <name>Andrej Sinicyn</name>
+      </name>
+      <user>
+         <user>rarog</user>
+      </user>
+      <email>
+         <email>rarog@gmx.net</email>
+      </email>
+   </authors>
+   <depends_php_min>5.3.0</depends_php_min>
+   <depends_php_max>6.0.0</depends_php_max>
+   <depends>
+      <package>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <files>
+            <files>      </files>
+         </files>
+      </package>
+      <extension>
+         <name>
+            <name>Core</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+      </extension>
+   </depends>
+   <contents>
+      <target>
+         <target>magelocal</target>
+         <target>mageetc</target>
+         <target>magecommunity</target>
+      </target>
+      <path>
+         <path/>
+         <path>/modules/AndrejSinicyn_Decryptor.xml</path>
+         <path>AndrejSinicyn/Decryptor</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>file</type>
+         <type>dir</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>

@@ -95,7 +95,6 @@ media/.htaccess
 media/import/
 media/xmlconnect/
 media/catalog/product/cache/
-api.php
 nbproject/
 pear
 pear/
@@ -118,4 +117,3 @@ skin/frontend/default/iphone/
 skin/frontend/default/modern/
 skin/frontend/enterprise
 skin/install/
-var/
